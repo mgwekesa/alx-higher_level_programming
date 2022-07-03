@@ -1,0 +1,64 @@
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Inputs with correct outputs
+
+>>> matrixA = [[1, 2, 3],[4, 5, 6],[7, 8, 9]]
+>>> matrixB = [[10, 11, 12],[13, 14, 15]]
+
+>>> matrix_divided(matrixA, 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0], [2.33, 2.67, 3.0]]
+
+>>> matrix_divided(matrixB, 4)
+[[2.5, 2.75, 3.0], [3.25, 3.5, 3.75]]
+
+Inputs results in an error
+>>> matrix_not_given = None
+>>> empty_matrix = []
+>>> empty_list_mat = [[],[],[]]
+>>> not_a_list = 34
+>>> not_a_matrix = [45, 67, 24]
+>>> diff_row_len = [[24, 56, 65], [43, 23, 87], [32, 42]]
+>>> all_not_num = [[23, "str", 56], [22, 43, 54]]
+>>> div_is_zero = 0
+>>> div_is_bool = True
+>>> div_is_str = "str"
+
+>>> matrix_divided(matrix_not_given, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(empty_matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(empty_list_mat, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(not_a_list, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(not_a_matrix, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(diff_row_len, 3)
+Traceback (most recent call last):
+TypeError: Each row of the matrix must have the same size
+
+>>> matrix_divided(all_not_num, 3)
+Traceback (most recent call last):
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+>>> matrix_divided(matrixA, div_is_zero)
+Traceback (most recent call last):
+ZeroDivisionError: division by zero
+
+>>> matrix_divided(matrixA, div_is_bool)
+Traceback (most recent call last):
+TypeError: div must be a number
+
+>>> matrix_divided(matrixA, div_is_str)
+Traceback (most recent call last):
+TypeError: div must be a number
