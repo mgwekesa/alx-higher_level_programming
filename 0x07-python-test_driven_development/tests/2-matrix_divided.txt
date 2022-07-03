@@ -15,7 +15,7 @@ Inputs results in an error
 >>> matrix_not_given = None
 >>> empty_matrix = []
 >>> empty_list_mat = [[],[],[]]
->>> not_a_list = 34
+>>> not_a_list = [34, [23, 32]]
 >>> not_a_matrix = [45, 67, 24]
 >>> diff_row_len = [[24, 56, 65], [43, 23, 87], [32, 42]]
 >>> all_not_num = [[23, "str", 56], [22, 43, 54]]
