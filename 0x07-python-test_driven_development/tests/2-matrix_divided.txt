@@ -62,3 +62,7 @@ TypeError: div must be a number
 >>> matrix_divided(matrixA, div_is_str)
 Traceback (most recent call last):
 TypeError: div must be a number
+
+>>> matrix_divided(matrixA)
+Traceback (most recent call last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
