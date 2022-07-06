@@ -1,0 +1,16 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> list = [6, 2, 3, 8, 9, 1]
+>>> MyList.print_sorted(list)
+[1, 2, 3, 6, 8, 9]
+
+Resulting in an error
+>>> list = ['a', 'b', 'd', 'c']
+>>> MyList.print_sorted(list)
+Traceback (most recent call last):
+TypeError: The list must contain integer elements
+
+>>> list = ['a', 2, 3, 'd']
+>>> MyList.print_sorted(list)
+Traceback (most recent call last):
+TypeError: The list must contain integer elements
