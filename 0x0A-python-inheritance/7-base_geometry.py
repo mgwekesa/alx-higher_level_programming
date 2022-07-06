@@ -9,6 +9,8 @@ class BaseGeometry:
         raise Exception("area() is not implemented")
     """ Public instance method integer_validator validates integer """
     def integer_validator(self, name, value):
+        if type(name) is not str:
+            raise TypeError("name must be a string")
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
