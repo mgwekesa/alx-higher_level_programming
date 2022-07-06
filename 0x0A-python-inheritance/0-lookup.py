@@ -11,4 +11,4 @@ def lookup(obj):
     Returns:
         list object
     """
-    return (obj)
+    return (dir(obj))
