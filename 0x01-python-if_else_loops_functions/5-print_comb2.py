@@ -2,6 +2,6 @@
 
 for num in range(0, 100):
     if num == 99:
-        print("%02d" % (num))
+        print("{}".format("%02d" % (num)))
     else:
-        print("%02d" % (num), end=", ")
+        print("{}".format("%02d" % (num)), end=", ")
