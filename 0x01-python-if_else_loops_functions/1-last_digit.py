@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 greater_than_5 = "Last digit of {} is {} and is greater than 5"
-less_6_not_0 = "The last digit of {} is {} and is less than 6 and not 0"
+less_6_not_0 = "Last digit of {} is {} and is less than 6 and not 0"
 if (number >= 0):
     if (number % 10 > 5):
         print(greater_than_5.format(number, number % 10))
