@@ -86,3 +86,14 @@ class Rectangle(Base):
         """ overides the string method """
         ret = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
         return (ret.format(self.id, self.x, self.y, self.width, self.height))
+
+    def update(self, *args):
+        """ assigns a key/value argument to each attribute """
+        try:
+            self.id = args[0]
+            self.width = args[1]
+            self.height = args[2]
+            self.x = args[3]
+            self.y = args[4]
+        except IndexError:
+            pass
