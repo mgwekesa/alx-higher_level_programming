@@ -76,8 +76,11 @@ class Rectangle(Base):
 
     def display(self):
         """ prints in stdout the Rectangle instance with character # """
+        for n in range(self.y):
+            print()
         for index in range(self.height):
-            print("".join(["#" for j in range(self.width)]))
+            print("".join(" " for j in range(self.x)), end="")
+            print("".join(["#" for k in range(self.width)]))
 
     def __str__(self):
         """ overides the string method """
