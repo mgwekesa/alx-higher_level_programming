@@ -78,3 +78,8 @@ class Rectangle(Base):
         """ prints in stdout the Rectangle instance with character # """
         for index in range(self.height):
             print("".join(["#" for j in range(self.width)]))
+
+    def __str__(self):
+        """ overides the string method """
+        ret = "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"
+        return (ret.format(self.id, self.x, self.y, self.width, self.height))
