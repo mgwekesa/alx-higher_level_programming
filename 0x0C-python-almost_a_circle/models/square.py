@@ -28,7 +28,7 @@ class Square(Rectangle):
         return (ret.format(self.id, self.x, self.y, self.width))
 
     def update(self, *args, **kwargs):
-        """ assigns attributes """
+        """ updates the Square """
         try:
             self.id = args[0]
             self.size = args[1]
@@ -36,5 +36,13 @@ class Square(Rectangle):
             self.y = args[3]
         except IndexError:
             pass
-    """ if *args exist, **kwargs are skipped """
-    """ **kwargs are a double pointer to a dictionary """
+
+        """ assigns a key/value argument to attributes """
+        if "id" in kwargs:
+            self.id = kwargs["id"]
+        if "size" in kwargs:
+            self.size = kwargs["size"]
+        if "x" in kwargs:
+            self.x = kwargs["x"]
+        if "y" in kwargs:
+            self.y = kwargs["y"]
