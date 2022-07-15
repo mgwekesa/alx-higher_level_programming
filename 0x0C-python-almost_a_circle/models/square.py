@@ -4,7 +4,9 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """ Square class """
     def __init__(self, size, x=0, y=0, id=None):
+        """ initializing the square class """
         self.size = size
         super().__init__(size, size, x, y, id)
 
@@ -15,11 +17,11 @@ class Square(Rectangle):
         return self.__width
 
     @size.setter
-    def size(self, value):
+    def size(self, size):
         """ setter for size """
-        super().validate("width", value)
-        self.__width = value
-        self.__height = value
+        super().validate("width", size)
+        self.__width = size
+        self.__height = size
 
     def __str__(self):
         ret = "[Square] ({:d}) {:d}/{:d} - {:d}"
