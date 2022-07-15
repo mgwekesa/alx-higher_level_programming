@@ -37,3 +37,12 @@ class Base:
 
         with open(file_n, mode='w') as f:
             f.write(j_str)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns the list of the JSON string representation json_string """
+        """ json_string is representing a list of dictionaries """
+        if json_string is None or json_string == "":
+            return []
+        list_dic = json.loads(json_string)
+        return list_dic
