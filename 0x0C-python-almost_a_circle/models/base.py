@@ -46,3 +46,19 @@ class Base:
             return []
         list_dic = json.loads(json_string)
         return list_dic
+
+    @classmethod
+    def create(cls, **dictionary):
+        """ returns an instance with all attributes already set """
+        """
+        **dictionary is a double pointer dictionary
+        to use update method to assign all attributes
+        - create a Rectangle instance with 'dummy' mandatory attributes,
+        - call update instance method to this 'dummy' to apply real values
+        """
+        if cls.__name__ == "Rectangle":
+            dummy = cls(6, 10)
+        if cls.__name__ == "Square":
+            dummy = cls(5)
+        dummy.update(**dictionary)
+        return dummy
