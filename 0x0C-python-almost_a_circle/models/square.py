@@ -26,3 +26,15 @@ class Square(Rectangle):
     def __str__(self):
         ret = "[Square] ({:d}) {:d}/{:d} - {:d}"
         return (ret.format(self.id, self.x, self.y, self.width))
+
+    def update(self, *args, **kwargs):
+        """ assigns attributes """
+        try:
+            self.id = args[0]
+            self.size = args[1]
+            self.x = args[2]
+            self.y = args[3]
+        except IndexError:
+            pass
+    """ if *args exist, **kwargs are skipped """
+    """ **kwargs are a double pointer to a dictionary """
