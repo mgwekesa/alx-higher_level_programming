@@ -2,6 +2,6 @@
 
 def read_file(filename=""):
     """ reads the file, and prints it to stdout """
-    with open(filename, encoding="utf-8") as f:
-        for line in f:
-            print(line, end='')
+    with open(filename, mode='r', encoding="utf-8") as f:
+        read_text = f.read()
+        print(read_text, end='')
